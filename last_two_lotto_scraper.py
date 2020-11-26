@@ -38,7 +38,6 @@ def write_data_to_json(data):
         fields.append(k)
         values.append(v)
         
-    
     for item in zip(values[0], values[1]):
         rows.append(item)
 
