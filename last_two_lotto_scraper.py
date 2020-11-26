@@ -12,14 +12,14 @@ def get_two_digit_lotto():
 
     data = {
         "date": [],
-        "two_digit_lotto": []
+        "last_two_digit_lotto": []
     }
-    
+
     for item in soup.find("tbody").find_all("tr"):
         tmp_item = item.find_all("td")
         if len(tmp_item) == 2:
             data["date"].append(tmp_item[0].string)
-            data["two_digit_lotto"].append(tmp_item[1].string)
+            data["last_two_digit_lotto"].append(tmp_item[1].string)
 
     return data
 
